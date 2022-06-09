@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <title>gfg</title>
+      <style type=text/css>
+         .leftdiv
+         {
+         float: left;
+         }
+         .middlediv
+         {
+         float: left;
+         background-color:gray
+         }
+         .rightdiv
+         {
+         float: left;
+         }
+         div{
+         padding : 1%;
+         color: white;
+         background-color: 009900;
+         width: 30%;
+         border: solid black;
+         }
+      </style>
+   </head>
+<body>
+    <div class="leftdiv">
+    <ul>
+        {% for item in itemList %}
+        <li><a href="/{{ urlFilePath }}/{{ item }}">{{ item }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="middlediv">
+  
+    <form action= "http://localhost:5000" method="POST">
+      <input type="text" id="name" name="name"/>
+      <input type="submit">
+  </form>
+</div>
+<div class="rightdiv">
+    <pre><code>
+          {{ text }} 
+       </code> </pre>
+    </div>
+</body>
+</html>
